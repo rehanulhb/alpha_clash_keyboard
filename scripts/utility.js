@@ -28,6 +28,6 @@ function getARandomAlphabet(){
     //console.log(index);
 
     const alphabet =alphabets[index];
-    console.log(index,alphabet);
+    //console.log(index,alphabet);
     return alphabet;
 }
