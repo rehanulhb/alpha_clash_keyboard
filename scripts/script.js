@@ -9,7 +9,26 @@
     //console.log(playgroundSection.classList); 
 } */
 
+function handleKeyboardKeyUpEvent(event){
+    const playerPressed = event.key;
+    console.log('Player Pressed',playerPressed);
 
+    const currentAlphabetElement = document.getElementById('current-alphabet');
+    const currentAlphabet = currentAlphabetElement.innerText;
+    const expectedAlphabet = currentAlphabet.toLowerCase();
+    //console.log(currentAlphabetElement.innerText);
+    console.log(playerPressed,expectedAlphabet);
+
+
+    if(playerPressed === expectedAlphabet){
+        console.log('You got a point');
+    }
+    else{
+        console.log('You missed. You lost a life');
+    }
+
+}
+document.addEventListener('keyup',handleKeyboardKeyUpEvent);
 
 function continueGame(){
       const alphabet = getARandomAlphabet();
